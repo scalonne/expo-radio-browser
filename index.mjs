@@ -1,6 +1,6 @@
 'use strice'
 
-const apiClient = require('./lib/api-client')
+import apiClient from './lib/api-client.mjs'
 
 const PARAM_TYPES = {
     hidebroken: 'boolean',
@@ -114,7 +114,7 @@ const parseFilter = function(route, filter={})
     }
 }
 
-const RadioBrowser = module.exports = {
+const RadioBrowser = {
     
     get service_url() 
     {
@@ -157,7 +157,7 @@ const RadioBrowser = module.exports = {
      * @param {object} filter {searchterm: <string>, order: <string>, reverse: <boolean>, hidebroken: <boolean>}
      * @returns {promise} 
      */
-    getCountries: (filter) => RadioBrowser.getCategory('countries', filter),
+    getCountries: (filter) => getCategory('countries', filter),
 
     /**
      * get a list of codecs
@@ -165,7 +165,7 @@ const RadioBrowser = module.exports = {
      * @param {object} filter {searchterm: <string>, order: <string>, reverse: <boolean>, hidebroken: <boolean>}
      * @returns {promise}
      */
-    getCodecs: (filter) => RadioBrowser.getCategory('codecs', filter),
+    getCodecs: (filter) => getCategory('codecs', filter),
 
     /**
      * Get a list of states
@@ -178,7 +178,7 @@ const RadioBrowser = module.exports = {
      * @param {object} filter {country: <string>, searchterm: <string>, order: <string>, reverse: <boolean>, hidebroken: <boolean>}
      * @returns {promise}
      */
-    getStates: (filter) => RadioBrowser.getCategory('states', filter),
+    getStates: (filter) => getCategory('states', filter),
 
     /**
      * get a list of languages
@@ -186,7 +186,7 @@ const RadioBrowser = module.exports = {
      * @param {object} filter {searchterm: <string>, order: <string>, reverse: <boolean>, hidebroken: <boolean>}
      * @returns {promise}
      */
-    getLanguages: (filter) => RadioBrowser.getCategory('languages', filter),
+    getLanguages: (filter) => getCategory('languages', filter),
 
     /**
      * get list of tags
@@ -194,7 +194,7 @@ const RadioBrowser = module.exports = {
      * @param {object} filter {searchterm: <string>, order: <string>, reverse: <boolean>, hidebroken: <boolean>}
      * @returns {promise}
      */
-    getTags: (filter) => RadioBrowser.getCategory('tags', filter),
+    getTags: (filter) => getCategory('tags', filter),
 
     /**
      * List of radio stations
@@ -396,3 +396,5 @@ const RadioBrowser = module.exports = {
         return CATEGORY_TYPES.slice(0);
     }
 }
+
+export default RadioBrowser

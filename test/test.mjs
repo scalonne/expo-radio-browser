@@ -1,6 +1,6 @@
 'use strict'
-const { expect } = require('chai');
-const RadioBrowser = require('../index')
+import { expect } from 'chai';
+import RadioBrowser from '../index.mjs';
 
 var serverStats = {}
 
