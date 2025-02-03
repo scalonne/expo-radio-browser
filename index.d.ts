@@ -28,6 +28,7 @@ export interface CategoryFilter {
 
 export interface RadioBrowserAPI {
     service_url: string;
+    setUserAgent: (userAgent: string) => void;
     getRandomHost: () => Promise<string>;
     getCategory: (category: string, filter?: CategoryFilter) => Promise<any>;
     getStations: (filter?: SearchOptions) => Promise<Station[]>;
@@ -55,6 +56,7 @@ const RadioBrowser: RadioBrowserAPI = {
     set service_url(url: string) {
         apiClient.service_url = url;
     },
+    setUserAgent: apiClient.setUserAgent,
     getRandomHost: apiClient.getRandomHost,
     getCategory: (category, filter = {}) => {
         return apiClient.request(category, filter);
