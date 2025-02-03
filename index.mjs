@@ -127,6 +127,18 @@ const RadioBrowser = {
     },
 
     /**
+     * Set the user agent
+     * 
+     * From radio-browser api:
+     * "Please send a descriptive User-Agent in your HTTP requests,
+     *  which makes it easier for me to get in touch with developers to help with the usage of the API.
+     *  Something like "appname/appversion", for example "Cool Radio App/1.2"."
+     * 
+     * @param {string} agent
+     */    
+    setUserAgent: apiClient.setUserAgent,
+
+    /**
      * get a radio-browser host
      * 
      * @returns {string}
