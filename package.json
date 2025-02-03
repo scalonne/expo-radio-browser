@@ -1,7 +1,7 @@
 {
-  "name": "radio-browser",
-  "version": "2.2.3",
-  "description": "expo compatible nodejs module for radio-browser API (http://www.radio-browser.info/webservice)",
+  "name": "expo-radio-browser",
+  "version": "3.0.0",
+  "description": "Expo module for radio-browser API (http://www.radio-browser.info/webservice)",
   "main": "index.mjs",
   "scripts": {
     "test": "mocha --reporter spec"
@@ -10,7 +10,7 @@
   "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scalonne/radio-browser.git"
+    "url": "git+https://github.com/scalonne/expo-radio-browser"
   },
   "keywords": [
     "webradio",
@@ -26,9 +26,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/scalonne/radio-browser/issues"
+    "url": "https://github.com/scalonne/expo-radio-browser/issues"
   },
-  "homepage": "https://github.com/scalonne/radio-browser#readme",
+  "homepage": "https://github.com/scalonne/expo-radio-browser#readme",
   "devDependencies": {
     "chai": "^4.5.0",
     "mocha": "^10.8.2"
